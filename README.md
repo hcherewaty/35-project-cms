@@ -10,12 +10,11 @@
 ### Links and Resources
 * [repo](https://github.com/hcherewaty/35-project-cms)
 * [travis]()
-* [front-end]()
+* [front-end](https://d1x4e9e2dcnr90.cloudfront.net/)
 
 ### Modules
 #### `modulename.js`
 ##### Exported Values and Methods
-
 
 
 

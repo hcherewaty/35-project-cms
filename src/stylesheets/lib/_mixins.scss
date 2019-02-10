@@ -1,0 +1,18 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+  }
+  
+  @mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari
+    -moz-box-sizing: $box-model; // Firefox
+    box-sizing: $box-model;
+  }
+  
+  @mixin my-border($border-width, $border-style, $border-color) {
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+  }
+
