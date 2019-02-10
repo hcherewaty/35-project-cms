@@ -1,20 +1,27 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import renderer from "react-test-renderer";
 import CMS from '../../../components/cms/cms';
 import Models from '../../../components/cms/models';
-import createStore from '../../../index';
+import createStore from '../../../store/index';
 
-describe('<App />', () => {
+// describe('<App />', () => {
+//
+//   let store, wrapper;
+//
+//   beforeEach(() => {
+//     store = createStore();
+//     wrapper = mount(<Provider store={store}><BrowserRouter><CMS/></BrowserRouter></Provider>);
+//   });
+// });
 
+describe('CMS component', () => {
   let store, wrapper;
 
   beforeEach(() => {
     store = createStore();
-    wrapper = mount(<Provider store={store}><BrowserRouter><CMS/></BrowserRouter></Provider>);
+    wrapper = mount(<Provider store={store}><CMS/></Provider>);
   });
-});
-
-describe('CMS component', () => {
 
   it('lives', () => {
     expect(true).toBeTruthy();
