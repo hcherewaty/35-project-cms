@@ -29,7 +29,7 @@ export default class CMS extends React.Component {
 
         <span className="centered">It's magical.</span>
         <div className="centered">
-        <iframe src="https://giphy.com/embed/3tJdwcnQOZxSZunvS3" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <iframe src="https://giphy.com/embed/3tJdwcnQOZxSZunvS3" width="480" height="360" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
         </div>
 
         <main>
