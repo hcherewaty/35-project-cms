@@ -6,6 +6,12 @@ let initialState = {
   record: {}
 };
 
+/**
+ *
+ * @Function - Accepts initial state and an action.  Reducer "Listens" for action to re-render page based on state change.
+ * @param {*} model
+ * @returns updated state or initial state in the case of default.
+ */
 export default (state = initialState, action) => {
   let { type, payload } = action;
 
