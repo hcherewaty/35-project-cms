@@ -1,50 +1,35 @@
 import React from 'react';
 import renderer from "react-test-renderer";
-import {Provider} from 'react-redux';
-import App from '../../../index';
+import CMS from '../../../components/cms/cms';
+import Models from '../../../components/cms/models';
 
-import Record from '../../../src/components/cms/record';
+describe('CMS component', () => {
 
-describe('<App />', () => {
-
-  let store, wrapper;
-
-  beforeEach(() => {
-    store = createStore();
-    wrapper = mount(<Provider store={store}><CMS/></Provider>);
+  it('lives', () => {
+    expect(true).toBeTruthy();
   });
-  
-    // it("proof of life", () => {
-    //   let component = shallow(<CMS />);
-    //   expect(component.find("nav").exists()).toBeTruthy();
-    // });
 
+  it('contains an h1 element', () => {
+    let component = shallow(<CMS/>);
+    expect(component.find('h1').exists()).toBeTruthy();
+  });
+
+  it('contains an iframe element', () => {
+    let component = shallow(<CMS/>);
+    expect(component.find('iframe').exists()).toBeTruthy();
+  });
+
+  it('contains an iframe element', () => {
+    let component = shallow(<CMS/>);
+    expect(component.find('footer').exists()).toBeTruthy();
+  });
 });
 
-// describe('<Record />', () => {
+describe('Models component', () => {
 
-  // it("proof of life", () => {
-  //   let component = shallow(<Record />);
-  //   expect(component.find("form").exists()).toBeTruthy();
-  // });
+  it('containes a ul', () => {
+    let component = shallow(<Models/>);
+    expect(component.find('div').exists()).toBeTruthy();
+  })
 
-  // it("changes state on submit", () => {
-  //   let component = mount(<Record />);
-  //   let submitter = component.find("button.btn.btn-info");
-  //   submitter.simulate("click");
-  //   expect(component.find("span").text()).toBe(true);
-  // });
-
-  // it("changes state on click to -1", () => {
-  //   let component = mount(<Counter />);
-  //   let clickerDown = component.find("a.downClick");
-  //   clickerDown.simulate("click");
-  //   expect(component.state("count")).toBe(-1);
-  //   expect(component.find("span").text()).toContain(-1);
-  // });
-
-  // it('renders correctly', () => {
-  //   const tree = renderer.create(<Record />).toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
-// })
+})
