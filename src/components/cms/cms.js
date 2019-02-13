@@ -3,6 +3,8 @@ import React from 'react';
 import Record from './record.js';
 import Models from './models.js';
 import Records from './records.js';
+import { LoginContext } from '../auth/context';
+import Login from '../auth/login';
 
 import '../../stylesheets/design.scss';
 
@@ -32,6 +34,8 @@ export default class CMS extends React.Component {
         <iframe src="https://giphy.com/embed/3tJdwcnQOZxSZunvS3" width="480" height="360" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
         </div>
 
+        <LoginContext>
+        <Login />
         <main>
         
             <nav className="centered">
@@ -47,6 +51,7 @@ export default class CMS extends React.Component {
             </section>
 
           </main>
+          </LoginContext>
 
           <footer>&copy; 2019 Heather Cherewaty</footer>
       </>
